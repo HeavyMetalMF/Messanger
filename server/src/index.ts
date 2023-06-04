@@ -12,7 +12,7 @@ import {S3AWS} from "./aws.ts";
 const PORT = process.env.PORT || 5000;
 const app = express()
 
-
+S3AWS()
 
 const start = async () => {
     try {
@@ -22,11 +22,10 @@ const start = async () => {
     }
 }
 
-S3AWS()
-
 // initS3()
 // const s3 = initS3()
 // // @ts-ignore
 // let list = await s3.GetList('/folder1/');
 // console.log(list)
+
 start()
