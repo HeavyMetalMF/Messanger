@@ -1,9 +1,7 @@
 import 'dotenv/config'
 import express from 'express';
-// @ts-ignore
-import {initS3} from "./YC.ts";
-// @ts-ignore
-import {S3AWS} from "./aws.ts";
+import {S3AWS} from "./aws";
+import userRouter from "./routes/userRouter";
 
 // import cors from 'cors';
 // import cookieParser from 'cookie-parser';
@@ -13,6 +11,8 @@ const PORT = process.env.PORT || 5000;
 const app = express()
 
 S3AWS()
+
+app.use('/api', userRouter)
 
 const start = async () => {
     try {
