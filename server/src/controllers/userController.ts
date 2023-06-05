@@ -6,20 +6,20 @@ export class UserController {
         res.json('ok')
     }
 
-    async getUsers(req: Request, res: Response) {
-
-    }
-
-    async getOneUser(req: Request, res: Response) {
-
-    }
-
-    async updateUser(req: Request, res: Response) {
-
-    }
-
-    async deleteUser(req: Request, res: Response) {
-
-    }
+    // async getUsers(req: Request, res: Response) {
+    //
+    // }
+    //
+    // async getOneUser(req: Request, res: Response) {
+    //
+    // }
+    //
+    // async updateUser(req: Request, res: Response) {
+    //
+    // }
+    //
+    // async deleteUser(req: Request, res: Response) {
+    //
+    // }
 }
 
