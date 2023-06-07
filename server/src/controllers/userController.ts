@@ -1,12 +1,12 @@
 import {Response, Request} from "express";
-// import db from "../database/db";
+import db from "../database/db";
 
 export class UserController {
     async createUser(req: Request, res: Response) {
-        const {name, lastname} = req.body;
-        // const newUser = db.query('INSERT INTO my_spoty (name, )')
-        console.log(name, lastname)
-        res.json('ok')
+        const {login, password, username} = req.body;
+        const newUser = await db.query("INSERT INTO users (login, password, username) values ($1, $2, $3) RETURNING *", [login, password, username])
+        console.log(newUser)
+        res.json(newUser.rows)
     }
 
     // async getUsers(req: Request, res: Response) {
