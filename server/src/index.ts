@@ -12,6 +12,7 @@ const app = express()
 
 S3AWS()
 
+app.use(express.json());
 app.use('/api', userRouter)
 
 const start = async () => {
